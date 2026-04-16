@@ -1,0 +1,30 @@
+{
+  "site": {
+    "name": "Mit Projekt"
+  },
+  "nav": {
+    "home": "Forside",
+    "about": "Om"
+  },
+  "home": {
+    "title": "Forside — Mit Projekt",
+    "description": "En Nuxt 4 starter med grundtone design system.",
+    "heading": "Velkommen til dit nye projekt",
+    "intro": "Denne starter er konfigureret med grundtone, Sentry, PostHog, i18n, a11y, Sanity CMS og mere. Alt er klar — du skal bare bygge.",
+    "cta": "Kom i gang",
+    "docs": "Dokumentation",
+    "docsUrl": "https://grundtone.dev",
+    "alertHeading": "Alt er konfigureret",
+    "alertBody": "Grundtone, linting, testing, CI/CD og analytics er klar. Tilpas nuxt.config.ts og .env med dine egne API-nøgler."
+  },
+  "about": {
+    "title": "Om — Mit Projekt",
+    "description": "Om dette projekt.",
+    "heading": "Om projektet",
+    "body": "Dette er en Nuxt 4 starter bygget med grundtone design system. Tilpas denne side til dit projekt."
+  },
+  "error": {
+    "notFound": "Siden blev ikke fundet",
+    "notFoundDesc": "Den side du leder efter eksisterer ikke eller er blevet flyttet."
+  }
+}

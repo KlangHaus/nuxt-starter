@@ -1,0 +1,23 @@
+// Global styles — only for app-specific layout that grundtone doesn't cover.
+// Use grundtone utility classes and tokens everywhere else.
+
+html {
+  scroll-behavior: smooth;
+}
+
+// Focus-visible for keyboard navigation
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+// Smooth page transitions
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
