@@ -23,6 +23,12 @@
     "heading": "Om projektet",
     "body": "Dette er en Nuxt 4 starter bygget med grundtone design system. Tilpas denne side til dit projekt."
   },
+  "cookie": {
+    "heading": "Vi bruger cookies",
+    "body": "Vi bruger cookies til analyse for at forbedre siden. Du kan acceptere eller afvise tracking.",
+    "accept": "Acceptér",
+    "reject": "Afvis"
+  },
   "error": {
     "notFound": "Siden blev ikke fundet",
     "notFoundDesc": "Den side du leder efter eksisterer ikke eller er blevet flyttet.",

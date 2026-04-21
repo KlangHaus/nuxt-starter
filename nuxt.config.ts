@@ -113,6 +113,29 @@ export default defineNuxtConfig({
     },
   },
 
+  // ── Security headers + caching ─────────────────────────────────────────────
+  routeRules: {
+    '/**': {
+      headers: {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'SAMEORIGIN',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+        'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
+      },
+    },
+    '/_nuxt/**': {
+      headers: { 'Cache-Control': 'public, max-age=31536000, immutable' },
+    },
+  },
+
+  // ── Sitemap ────────────────────────────────────────────────────────────────
+  sitemap: {
+    // Tilføj dynamiske sider (fx fra Sanity) via en endpoint:
+    // sources: ['/api/__sitemap__/urls'],
+    exclude: ['/404'],
+  },
+
   // ── Runtime config ─────────────────────────────────────────────────────────
   runtimeConfig: {
     public: {

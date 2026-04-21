@@ -23,6 +23,8 @@
     <slot />
   </main>
 
+  <CookieConsent />
+
   <GTFooter :nav="nav">
     <template #copyright> &copy; {{ new Date().getFullYear() }} {{ t('site.name') }} </template>
   </GTFooter>

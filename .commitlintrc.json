@@ -1,6 +1,25 @@
 {
   "extends": ["@commitlint/config-conventional"],
   "rules": {
-    "scope-empty": [2, "never"]
+    "scope-empty": [2, "never"],
+    "scope-enum": [
+      2,
+      "always",
+      [
+        "starter",
+        "deps",
+        "ci",
+        "docs",
+        "i18n",
+        "ui",
+        "api",
+        "config",
+        "tests",
+        "seo",
+        "a11y",
+        "perf",
+        "security"
+      ]
+    ]
   }
 }

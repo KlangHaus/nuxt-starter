@@ -12,6 +12,7 @@
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "analyze": "nuxt analyze",
     "postinstall": "nuxt prepare",
     "lint": "eslint . && stylelint '**/*.{scss,vue}' && prettier --check .",
     "lint:fix": "eslint . --fix && stylelint '**/*.{scss,vue}' --fix && prettier --write .",

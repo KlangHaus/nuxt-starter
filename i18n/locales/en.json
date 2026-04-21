@@ -23,6 +23,12 @@
     "heading": "About the project",
     "body": "This is a Nuxt 4 starter built with the grundtone design system. Customise this page for your project."
   },
+  "cookie": {
+    "heading": "We use cookies",
+    "body": "We use cookies for analytics to improve this site. You can accept or reject tracking.",
+    "accept": "Accept",
+    "reject": "Reject"
+  },
   "error": {
     "notFound": "Page not found",
     "notFoundDesc": "The page you are looking for does not exist or has been moved.",
