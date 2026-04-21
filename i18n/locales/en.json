@@ -7,7 +7,7 @@
     "about": "About"
   },
   "home": {
-    "title": "Home — My Project",
+    "title": "Home",
     "description": "A Nuxt 4 starter with grundtone design system.",
     "heading": "Welcome to your new project",
     "intro": "This starter is pre-configured with grundtone, Sentry, PostHog, i18n, a11y, Sanity CMS, and more. Everything is ready — just build.",
@@ -18,13 +18,16 @@
     "alertBody": "Grundtone, linting, testing, CI/CD, and analytics are ready. Customise nuxt.config.ts and .env with your own API keys."
   },
   "about": {
-    "title": "About — My Project",
+    "title": "About",
     "description": "About this project.",
     "heading": "About the project",
     "body": "This is a Nuxt 4 starter built with the grundtone design system. Customise this page for your project."
   },
   "error": {
     "notFound": "Page not found",
-    "notFoundDesc": "The page you are looking for does not exist or has been moved."
+    "notFoundDesc": "The page you are looking for does not exist or has been moved.",
+    "generic": "Something went wrong",
+    "genericDesc": "An unexpected error occurred. Please try again.",
+    "back": "Back to home"
   }
 }

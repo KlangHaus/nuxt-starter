@@ -7,6 +7,8 @@ export default withNuxt(
     rules: {
       ...sonarjs.configs.recommended.rules,
       'sonarjs/no-duplicate-string': 'off',
+      // Vue 3 allows fragments (multiple template roots)
+      'vue/no-multiple-template-root': 'off',
     },
   },
 );
