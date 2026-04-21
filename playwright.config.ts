@@ -15,7 +15,7 @@ export default defineConfig({
     { name: 'mobile', use: { ...devices['iPhone 14'] } },
   ],
   webServer: {
-    command: 'pnpm dev',
+    command: 'bun run dev',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
     timeout: 30_000,

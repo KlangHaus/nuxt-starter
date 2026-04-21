@@ -39,11 +39,28 @@ export default defineNuxtConfig({
     '@grundtone/nuxt',
     '@nuxt/a11y',
     '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/image',
     '@nuxtjs/i18n',
-    '@nuxtjs/sanity',
     '@nuxtjs/robots',
+    '@nuxtjs/sanity',
+    '@nuxtjs/sitemap',
     '@sentry/nuxt/module',
   ],
+
+  // ── Site (delt af sitemap + robots) ────────────────────────────────────────
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://example.com',
+    name: 'Grundtone Nuxt Starter',
+  },
+
+  // ── Fonts ──────────────────────────────────────────────────────────────────
+  fonts: {
+    families: [
+      { name: 'Inter', provider: 'google' },
+      { name: 'Fira Code', provider: 'google' },
+    ],
+  },
 
   // ── Grundtone ──────────────────────────────────────────────────────────────
   grundtone: {
@@ -57,7 +74,6 @@ export default defineNuxtConfig({
       { code: 'da', name: 'Dansk', file: 'da.json' },
       { code: 'en', name: 'English', file: 'en.json' },
     ],
-    lazy: true,
     langDir: '../i18n/locales',
     strategy: 'prefix_except_default',
   },
@@ -75,14 +91,12 @@ export default defineNuxtConfig({
     sourceMapsUploadOptions: {
       org: process.env.SENTRY_ORG || '',
       project: process.env.SENTRY_PROJECT || '',
+      authToken: process.env.SENTRY_AUTH_TOKEN || '',
     },
   },
 
   // ── CSS ────────────────────────────────────────────────────────────────────
-  css: [
-    '@grundtone/vue/css/utilities',
-    '~/assets/scss/global.scss',
-  ],
+  css: ['@grundtone/vue/css/utilities', '~/assets/scss/global.scss'],
 
   // ── Vite ───────────────────────────────────────────────────────────────────
   vite: {
