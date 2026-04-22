@@ -64,7 +64,7 @@ export default defineNuxtConfig({
 
   // ── Grundtone ──────────────────────────────────────────────────────────────
   grundtone: {
-    theme,
+    theme: theme as unknown as { light?: Record<string, unknown>; dark?: Record<string, unknown> },
   },
 
   // ── i18n ───────────────────────────────────────────────────────────────────
@@ -102,6 +102,28 @@ export default defineNuxtConfig({
   vite: {
     optimizeDeps: {
       include: ['@grundtone/vue', '@grundtone/utils'],
+    },
+  },
+
+  // ── Type shim for @grundtone/vue components ───────────────────────────────
+  // Grundtone ships raw .vue sources som har strict-mode type errors vi ikke kan
+  // fikse upstream. Vi erstatter typeof-import af deres src/*.vue i den
+  // genererede components.d.ts med en generisk DefineComponent — runtime er
+  // uændret (Vite resolver stadig komponenten).
+  hooks: {
+    'app:templates'(app) {
+      const shimStub =
+        "import('vue').DefineComponent<Record<string, unknown>, Record<string, unknown>, unknown>";
+      const shimRe = /typeof import\("[^"]*@grundtone\/vue\/src\/[^"]*\.vue"\)\['default'\]/g;
+      for (const template of app.templates) {
+        if (!template.filename?.endsWith('components.d.ts')) continue;
+        if (typeof template.getContents !== 'function') continue;
+        const original = template.getContents;
+        template.getContents = async (ctx: Parameters<typeof original>[0]) => {
+          const content = await original(ctx);
+          return content.replace(shimRe, shimStub);
+        };
+      }
     },
   },
 

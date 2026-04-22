@@ -1,7 +1,7 @@
 <script setup lang="ts">
   const { t } = useI18n();
-  const appConfig = useAppConfig();
-  const siteName = computed(() => t('site.name') || appConfig.site.name);
+  const appConfig = useAppConfig() as { site?: { name?: string } };
+  const siteName = computed(() => t('site.name') || appConfig.site?.name || '');
 
   useSeoMeta({
     titleTemplate: (title) => (title ? `${title} — ${siteName.value}` : siteName.value),

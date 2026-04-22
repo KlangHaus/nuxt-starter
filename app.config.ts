@@ -6,3 +6,12 @@ export default defineAppConfig({
     twitter: '@grundtone',
   },
 });
+
+declare module '@nuxt/schema' {
+  interface AppConfigInput {
+    site?: {
+      name?: string;
+      twitter?: string;
+    };
+  }
+}
