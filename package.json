@@ -32,7 +32,7 @@
     "@nuxtjs/robots": "^6.0.6",
     "@nuxtjs/sanity": "^2.2.0",
     "@nuxtjs/sitemap": "^8.0.13",
-    "@sentry/nuxt": "^9.23.0",
+    "@sentry/nuxt": "^10.69.0",
     "nuxt": "^4.4.2",
     "posthog-js": "^1.250.1",
     "vue": "^3.5.32",
