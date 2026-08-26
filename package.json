@@ -23,7 +23,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@grundtone/nuxt": "^2.23.2",
+    "@grundtone/nuxt": "^3.0.0",
     "@nuxt/a11y": "^1.0.0-alpha.1",
     "@nuxt/eslint": "^1.15.2",
     "@nuxt/fonts": "^0.14.0",
