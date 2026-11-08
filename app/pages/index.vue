@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { t } = useI18n();
+  const { t } = useI18n();
 
-useSeoMeta({
-  title: t('home.title'),
-  description: t('home.description'),
-});
+  useSeoMeta({
+    title: t('home.title'),
+    description: t('home.description'),
+  });
 </script>
 
 <template>
@@ -26,7 +26,7 @@ useSeoMeta({
         </GTButton>
       </div>
 
-      <hr class="border-light my-8">
+      <hr class="border-light my-8" >
 
       <GTAlert variant="info" :heading="t('home.alertHeading')">
         {{ t('home.alertBody') }}
