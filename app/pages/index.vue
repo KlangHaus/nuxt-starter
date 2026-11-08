@@ -26,7 +26,7 @@
         </GTButton>
       </div>
 
-      <hr class="border-light my-8" >
+      <hr class="border-light my-8" />
 
       <GTAlert variant="info" :heading="t('home.alertHeading')">
         {{ t('home.alertBody') }}

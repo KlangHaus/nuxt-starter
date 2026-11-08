@@ -8,5 +8,9 @@ export default withNuxt({
     'sonarjs/no-duplicate-string': 'off',
     // Vue 3 allows fragments (multiple template roots)
     'vue/no-multiple-template-root': 'off',
+    // Agree with Prettier, which writes void elements as `<hr />`. The rule's
+    // default (`void: 'never'`) made lint-staged's `eslint --fix` rewrite them
+    // to `<hr >` on commit, and `prettier --check` in CI then failed.
+    'vue/html-self-closing': ['warn', { html: { void: 'always' } }],
   },
 });
