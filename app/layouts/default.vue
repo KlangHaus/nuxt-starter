@@ -9,15 +9,7 @@
 
 <template>
   <GTSkipLink />
-  <GTHeader :logo="t('site.name')" logo-href="/">
-    <template #nav>
-      <a v-for="item in nav" :key="item.href" :href="item.href">
-        {{ item.label }}
-      </a>
-      <LanguageSwitcher />
-      <ThemeToggle />
-    </template>
-  </GTHeader>
+  <AppHeader :nav="nav" />
 
   <main id="main">
     <slot />
@@ -25,7 +17,5 @@
 
   <CookieConsent />
 
-  <GTFooter :nav="nav">
-    <template #copyright> &copy; {{ new Date().getFullYear() }} {{ t('site.name') }} </template>
-  </GTFooter>
+  <AppFooter :nav="nav" />
 </template>

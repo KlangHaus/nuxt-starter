@@ -1,3 +1,4 @@
+import type { Theme } from '@grundtone/core';
 import { applyThemeToDOM } from '@grundtone/vue';
 
 export function useThemeSwitch() {
@@ -19,7 +20,7 @@ export function useThemeSwitch() {
     // Re-apply grundtone tokens for current mode
     const tokens = isDark.value ? grundtone?.theme?.dark : grundtone?.theme?.light;
     if (tokens) {
-      applyThemeToDOM(tokens as Record<string, unknown>);
+      applyThemeToDOM(tokens as unknown as Theme);
     }
   }
 
