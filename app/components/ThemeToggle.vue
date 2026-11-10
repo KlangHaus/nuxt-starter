@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { isDark, toggleMode } = useThemeSwitch();
+  const { isDark, toggleMode } = useThemeSwitch();
 </script>
 
 <template>

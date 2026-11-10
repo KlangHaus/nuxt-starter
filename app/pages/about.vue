@@ -1,20 +1,15 @@
 <script setup lang="ts">
-const { t } = useI18n();
+  const { t } = useI18n();
 
-useSeoMeta({
-  title: t('about.title'),
-  description: t('about.description'),
-});
+  useSeoMeta({
+    title: t('about.title'),
+    description: t('about.description'),
+  });
 </script>
 
 <template>
   <div class="container py-8">
-    <GTBreadcrumb
-      :items="[
-        { label: t('nav.home'), href: '/' },
-        { label: t('nav.about') },
-      ]"
-    />
+    <GTBreadcrumb :items="[{ label: t('nav.home'), href: '/' }, { label: t('nav.about') }]" />
 
     <div class="max-w-prose mt-6">
       <h1 class="text-3xl font-bold mb-4 font-heading">

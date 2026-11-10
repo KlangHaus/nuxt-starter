@@ -1,9 +1,8 @@
-import { applyThemeToDOM, createTheme } from '@grundtone/vue';
+import { applyThemeToDOM } from '@grundtone/vue';
 
 export function useThemeSwitch() {
   const isDark = useState('theme-dark', () => false);
 
-  const config = useRuntimeConfig();
   const nuxtApp = useNuxtApp();
 
   // Read grundtone theme from module options (injected at build time)
