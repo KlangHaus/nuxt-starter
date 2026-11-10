@@ -2,7 +2,7 @@ import { createTheme } from '@grundtone/core';
 
 // ── Theme ────────────────────────────────────────────────────────────────────
 // Customise your brand colors, fonts, and radii here.
-// See: https://grundtone.dev/guide/theme-configuration
+// See: https://docs.grundtone.com/guide/theme-configuration.html
 
 const theme = createTheme({
   light: {
@@ -96,7 +96,8 @@ export default defineNuxtConfig({
   },
 
   // ── CSS ────────────────────────────────────────────────────────────────────
-  css: ['@grundtone/vue/css/utilities', '~/assets/scss/global.scss'],
+  // @grundtone/nuxt adds grundtone's own CSS, utility classes included.
+  css: ['~/assets/scss/global.scss'],
 
   // ── Vite ───────────────────────────────────────────────────────────────────
   vite: {

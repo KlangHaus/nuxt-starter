@@ -51,7 +51,7 @@ app/
   app.vue                # global SEO defaults (titleTemplate, OG)
   error.vue              # 404 / generic error page
   assets/scss/           # global SCSS
-  components/            # auto-importerede komponenter (Theme/LanguageSwitcher, CookieConsent)
+  components/            # auto-importerede komponenter (AppHeader/AppFooter, Theme/LanguageSwitcher, CookieConsent)
   composables/           # fx useCookieConsent, useThemeSwitch
   layouts/               # default.vue (header/footer/cookie banner)
   middleware/            # route middleware
@@ -111,7 +111,9 @@ Tilladte commit-scopes er defineret i `.commitlintrc.json`.
 
 ## Theming
 
-Rediger tokens i `nuxt.config.ts` under `createTheme({ light, dark })`. Se [grundtone.dev/guide/theme-configuration](https://grundtone.dev/guide/theme-configuration).
+Rediger tokens i `nuxt.config.ts` under `createTheme({ light, dark })` fra `@grundtone/core`. Se [docs.grundtone.com/guide/theme-configuration](https://docs.grundtone.com/guide/theme-configuration.html).
+
+Header og footer er starterens egne komponenter, `app/components/AppHeader.vue` og `AppFooter.vue`, bygget på grundtones tokens. grundtone 3.x har ingen færdig site-header, så ret dem til dit projekt.
 
 ## Assets
 

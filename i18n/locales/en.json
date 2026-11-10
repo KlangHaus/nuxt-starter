@@ -4,7 +4,9 @@
   },
   "nav": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "label": "Main menu",
+    "footerLabel": "Footer"
   },
   "home": {
     "title": "Home",
@@ -13,7 +15,7 @@
     "intro": "This starter is pre-configured with grundtone, Sentry, PostHog, i18n, a11y, Sanity CMS, and more. Everything is ready — just build.",
     "cta": "Get started",
     "docs": "Documentation",
-    "docsUrl": "https://grundtone.dev",
+    "docsUrl": "https://docs.grundtone.com",
     "alertHeading": "Everything is configured",
     "alertBody": "Grundtone, linting, testing, CI/CD, and analytics are ready. Customise nuxt.config.ts and .env with your own API keys."
   },
